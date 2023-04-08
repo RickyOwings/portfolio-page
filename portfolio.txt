@@ -1,0 +1,56 @@
+I want to make a static website that I will host on github pages that will act as a portfolio for my work
+
+Keypoints:
+    - Showcase different things I have done
+        - Conveyor Game
+        - Terminal Typing V2
+        - Github Homepage
+        - Tower Defense Game
+        - Kessler Knockout
+        - Blender Stuff
+        - Music Stuff
+    - About Me Page
+        - Description of myself:
+            - Personality
+                Calm demeanor
+                Often called Spock by my Dad!
+                Loves to learn new things
+                Natuarally a troubleshooter at heart, stopping at nothing
+            - Skills
+                Programming / Computer Science
+                    Items: 
+                        - HTML
+                        - CSS
+                        - JAVASCRIPT/TYPESCRIPT
+                        - Python
+                        - C 
+                        - SQL
+
+                        - Linux
+                        - Windows
+
+                        - GMOD Wiremod Lua
+                    About:
+                        I got into programming when I was in highschool. I was playing Garrys mod one day and got into 
+                        programming with a mod called Wiremod which is derived from Lua. After that, I took a course on
+                        codecademy on Javascript, making fun side projects as I went. 
+
+                Other 
+                    - Blender 3D Modeling
+                    - Music Production
+                        - Audacity
+                        - LMMS
+                        - Musescore
+                        - Famitracker
+
+            - Hobbies
+                - Gaming
+                - Programming fun things
+
+                
+
+
+    - Contact Me Section
+    - Show don't tell
+
+

@@ -1,0 +1,149 @@
+:root {
+    --text-primary-color: #000;
+    --text-secondary-color: #212121;
+
+    /* --primary-color: #f7f3eb; */
+    --primary-color: #ffffff;
+    /* --secondary-color: #e9e5df; */
+    --secondary-color: #eeeeee;
+    --selected-color: #c8fbff;
+    /* --unselected-color: #e0d9d4; */
+    --unselected-color: #dddddd;
+
+    --project-width: 700px;
+}
+
+body {
+    color:var(--text-primary-color);
+    font-family: 'Roboto Condensed', sans-serif;
+    background-color: var(--primary-color);
+}
+
+/* ------SELECTABLE------ */
+
+.selectable {
+    margin:4px;
+    padding:4px;
+    transition: scale 0.05s, background-color 0.05s;
+    background-color: var(--unselected-color);
+    touch-action: none;
+}
+
+.selectable:hover{
+    background-color: var(--selected-color);
+    scale: 110%;
+}
+
+.selectable:active{
+    background-color: var(--selected-color);
+    scale: 90%;
+}
+
+
+/* ------SELECTABLE------ */
+
+.navbar {
+    position:fixed;
+    width: 100%;
+    top:0;
+    background-color: var(--secondary-color);
+    border: solid px var(--unselected-color);
+
+    transition: opacity 0.2s;
+}
+
+#navbarSpacer {
+    height: 60px;
+}
+
+/* ---- CUSTOM SYTLE SELECTORS ---- */
+
+.fill-width {
+    width: 100%;
+}
+
+.center-elements {
+    height: min-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.centered {
+    text-align: center;
+}
+
+.pri {
+    background-color: var(--primary-color);
+}
+
+.sec {
+    background-color: var(--secondary-color);
+    border: solid 1px var(--unselected-color);
+    margin: 1px;
+}
+
+.tc-pri {
+    color:var(--text-primary-color);
+    text-decoration: none;
+}
+.tc-sec {
+    color:var(--secondary-color);
+    text-decoration: none;
+}
+
+.img-width {
+    width: 100%;
+    border: solid 1px var(--text-primary-color);
+}
+
+.content-width {
+    width: var(--project-width);
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+/* Could not do project width variable here for some reason */
+@media only screen and (max-width: 1400px) {
+    .projects-container {
+        flex-direction: column;
+    }
+}
+
+
+.aboutMe-section {
+    width: var(--project-width);
+}
+
+/* Could not do project width variable here for some reason */
+@media only screen and (max-width: 700px) {
+    .content-width {
+        width: 100%;
+    }
+    .aboutMe-section {
+        width: 100%;
+    }
+}
+
+.justify-elements {
+    display: flex;
+    justify-content: center;
+}
+
+.boring-button {
+    border-style: none;
+}
+
+.about {
+    position: inherit;
+    margin: 0 auto;
+}
+
+
+/* ---- CUSTOM SYTLE SELECTORS ---- */
