@@ -1,5 +1,10 @@
+const volumeController = document.getElementById('volume-controller')
 const musicContainer = document.createElement('div');
-musicContainer.className = "projects-container";
+musicContainer.className = "audio-container";
+musicContainer.style.opacity = "0";
+setTimeout(()=>{
+    musicContainer.style.opacity = "1";
+}, 1000)
 document.body.appendChild(musicContainer);
 
 const filenames = [
@@ -45,10 +50,78 @@ function createAudioElement(filename, toAppend){
     let div = document.createElement("div");
     let label = document.createElement("p");
     label.innerHTML = filename.replace(".mp3", "")
-    div.className = "sec center-elements content-width"
+    div.className = "audio-section center-elements"
     audio.src = url;
-    audio.controls = true;
     div.appendChild(label);
     div.appendChild(audio);
+    div.appendChild(createControls(audio))
     toAppend.appendChild(div);
+}
+/**
+ * 
+ * @param {HTMLAudioElement} audio 
+ */
+function createControls(audio){
+    let spacer1 = document.createElement('div');
+    spacer1.className = "control-spacer";
+
+    let spacer2 = document.createElement('div');
+    spacer2.className = "control-spacer";
+
+    // contains the controls
+    let div = document.createElement("div");
+    div.className = "audio-controls";
+    // playbutton
+    let playbutton = document.createElement("div");
+    playbutton.className = "audio-playbutton";
+    playbutton.playState = "paused";
+    playbutton.addEventListener('click', ()=>{
+        playbutton.playState = (playbutton.playState == "paused") ? "playing" : "paused";
+        if (playbutton.playState == "playing") {
+            audio.play()
+            playbutton.className = "audio-playbutton stop-button"
+        } else {
+            playbutton.className = "audio-playbutton"
+            audio.pause()
+        }
+    });
+    playbutton.loaded = false;
+    playbutton.addEventListener('mouseover', ()=>{
+        if (!playbutton.loaded) {
+        }
+    });
+    // slider
+    let slider = document.createElement("input");
+    slider.className = "audio-slider";
+    slider.type = "range";
+    slider.min = 0;
+    slider.max = 1;
+    slider.step = 0.01;
+    slider.placeholder = 0;
+    slider.addEventListener('input', ()=>{
+        let time = slider.value * audio.duration;
+        audio.currentTime = time;
+    });
+    let timer = document.createElement("div");
+
+
+    setInterval(()=>{
+        slider.value = audio.currentTime / audio.duration;
+        timer.innerHTML = `${Math.floor(audio.currentTime)}s | ${Math.floor(audio.duration)}s`;
+        if (audio.currentTime >= audio.duration) {
+            playbutton.className = "audio-playbutton"
+        }
+    }, 500);
+
+    audio.volume = volumeController.value;
+    volumeController.addEventListener('input', ()=>{
+        audio.volume = volumeController.value;
+    });
+
+    div.appendChild(playbutton);
+    div.appendChild(spacer1);
+    div.appendChild(slider);
+    div.appendChild(spacer2);
+    div.appendChild(timer);
+    return div;
 }

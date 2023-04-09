@@ -13,6 +13,14 @@
     --project-width: 700px;
 }
 
+.navbar-brand {
+    color: var(--text-primary-color)
+}
+
+.navbar-brand:hover {
+    color: var(--text-primary-color)
+}
+
 body {
     color:var(--text-primary-color);
     font-family: 'Roboto Condensed', sans-serif;
@@ -27,6 +35,8 @@ body {
     transition: scale 0.05s, background-color 0.05s;
     background-color: var(--unselected-color);
     touch-action: none;
+    cursor:pointer;
+    user-select: none;
 }
 
 .selectable:hover{
@@ -66,6 +76,7 @@ body {
     height: min-content;
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     justify-content: flex-start;
     align-items: center;
 }
@@ -162,4 +173,144 @@ body {
 }
 
 
+
 /* ---- CUSTOM SYTLE SELECTORS ---- */
+
+
+
+/* ----SLIDER---- */
+
+input[type="range"] {
+    -webkit-appearance: none;
+    width: 200px;
+}
+   
+input[type="range"]:focus {
+    outline: none;
+}
+
+input[type="range"]::-webkit-slider-runnable-track{
+    background: var(--text-primary-color);
+    height: 5px;
+}
+   
+input[type="range"]::-moz-range-track {
+    background: var(--text-primary-color);
+    height: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+ -webkit-appearance: none;
+ height: 15px;
+ width: 15px;
+background: var(--text-primary-color);
+ /* background: var(--text-primary-color); */
+ margin-top: -5px;
+ border-radius: 50%;
+}
+
+input[type="range"]::-moz-range-thumb {
+ height: 15px;
+ width: 15px;
+background:var(--unselected-color); 
+background: var(--text-primary-color);
+ /* background: var(--text-primary-color); */
+ margin-top: -5px;
+ border-radius: 50%;
+}
+
+
+/* ----SLIDER---- */
+
+/* audio stuff */
+
+
+.audio-container {
+    display: flex;
+    flex-wrap:wrap;
+    flex-direction: row;
+    justify-content: center;
+    transition: opacity 0.5s;
+}
+
+.audio-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    height:50px;
+}
+
+.control-spacer {
+    width: 4px;
+}
+
+.audio-section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap:nowrap;
+    border: solid 1px var(--secondary-color);
+    margin:4px;
+    padding:4px;
+    width: 400px;
+    height: 80px;
+}
+
+.audio-playbutton {
+    --button-color: var(--text-primary-color);
+    --button-size: 30px;
+    width: 0;
+    height: 0;
+    border-top:calc(var(--button-size) / 2.5) solid transparent;
+    border-bottom:calc(var(--button-size) / 2.5) solid transparent;
+    border-left:calc(var(--button-size) / 1.5) solid var(--button-color);
+    border-right:0 solid var(--button-color);
+
+    /* border-top:calc(var(--button-size)) solid var(--button-color);
+    border-bottom: 0 solid transparent;
+    border-left:var(--button-size) solid var(--button-color);
+    border-right: solid var(--button-color); */
+
+
+    transition: 
+        scale 0.1s,
+        border-top-width 0.1s,
+        border-bottom-width 0.1s,
+        border-left-width 0.1s,
+        border-right-width 0.1s,
+}
+
+.stop-button {
+    --stop-button-size: calc(var(--button-size) / 1.5);
+    border-radius: 4px;
+    border-top:var(--stop-button-size) solid var(--button-color);
+    border-bottom: 0 solid transparent;
+    border-left:var(--stop-button-size) solid var(--button-color);
+    border-right: solid var(--button-color);
+}
+
+.audio-playbutton:hover {
+    scale: 110%;
+    --button-color: var(--selected-color)
+}
+
+.audio-playbutton:active{
+    scale: 90%;
+    --button-color: var(--selected-color)
+}
+
+.audio-slider {
+
+}
+
+.volume-controller {
+    display: flex;
+    align-items: center;
+    background-color: var(--unselected-color);
+    margin: 4px;
+    padding: 4px;
+}
+
+.audio-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+}

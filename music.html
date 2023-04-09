@@ -17,35 +17,59 @@
 
   <link rel="stylesheet" href="styles.css">
   <script src="navbar.js"></script>
+  <script src="themeChanger.js"></script>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg" id="navbar" style="z-index: 255;">
-        <div class="container-fluid">
-            <video preload muted autoplay="true" loop width="32px" style="display:flex" poster="./images/my_face.png">
-                <source src="./images/my_face.webm">
-            </video>
-        <div class="navbar-brand" href="#">
-            &nbspRicky's Portfolio
+  <nav class="navbar navbar-expand-lg" id="navbar" style="z-index: 255;">
+    <div class="container-fluid">
+        <video preload muted autoplay="true" loop width="32px" style="display:flex" poster="./images/my_face.png">
+            <source src="./images/my_face.webm">
+        </video>
+      <div class="navbar-brand" href="#">
+          &nbspRicky's Portfolio
+      </div>
+      <button class="navbar-toggler selectable" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+        <div class="navbar-nav">
+          <a class="tc-pri selectable passesTheme" href="./index.html?theme=light" role="button">Homepage</a>
+          <a class="tc-pri selectable" href="#myMusic" role="button">My Music</a>
+          <a class="tc-pri selectable" href="#about" role="button">About</a>
+          <div class="tc-pri volume-controller">
+            <div>Volume</div>
+            <div class="control-spacer"></div>
+            <input type="range" id="volume-controller" min="0" max="1" step="0.01" value="0.1">
+          </div>
+          <div class="tc-pri volume-controller selectable" id="change-theme">
+            Change Theme
+          </div>
         </div>
-        <button class="navbar-toggler selectable" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-                <a class="tc-pri selectable" href="./index.html" role="button">Homepage</a>
-            </div>
-        </div>
+      </div>
   </nav>
   <div id="navbarSpacer"></div>
   <div class="fill-width center-elements">
-      <h3>My Music</h3>
+    <h3 id="myMusic">My Music</h3>
   </div>
   <script src="music.js"></script>
   <div class="fill-width center-elements">
-    <h3>About</h3>
+    <h3 id="about">About</h3>
     <div class="content-width">
+      <h5 class="underline">History</h5>
       <p>
-        I use various software to make it including LMMS, Famitracker, and Musescore.
+        When I was in third grade, I took private lessons on how to play the trumpet. When I went into middle school, I joined the band class. playing trumpet. I did some competitions and got to go to the OSU honor band in middle school while also joining the jazz band. When I was in 8th grade, I went into the high school marching band. I did that for a total of five years and it was really fun. I still enjoy playing trumpet to this day
+      </p>
+      <h5 class="underline">First Software</h5>
+      <p>
+        I have been making music for a very long time. The first piece of software that I used was called Musescore. The software was a music notation software, so it was made for making sheet music for people to play. I, however, would use it to make cool sounding songs because it was fun.
+      </p>
+      <h5 class="underline">Second Software</h5>
+      <p>
+        After Musescore, I got into the other piece of software called Famitracker. Famitracker was a music making software that aimed to emulate old game consoles. When you make a song in Famitracker, you are kind of limiting yourself, which might sound bad, but it actually makes you be more creative with the way that you write songs with it.
+      </p>
+      <h5 class="underline">Third Software</h5>
+      <p>
+        After that, I then got into another software called LMMS. It is not really the best software out there, as things like FL Studio are way better to make music with, but LMMS is free and is pretty powerful once you learn the ropes of how it works.
       </p>
     </div>
   </div>
