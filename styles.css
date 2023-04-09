@@ -112,6 +112,10 @@ body {
     text-decoration: underline;
 }
 
+.zindex-1 {
+    z-index: 1;
+}
+
 /* Could not do project width variable here for some reason */
 @media only screen and (max-width: 1400px) {
     .projects-container {
@@ -137,6 +141,15 @@ body {
 .justify-elements {
     display: flex;
     justify-content: center;
+}
+
+.left-justified {
+    display: flex;
+    justify-content: left;
+}
+
+.right-zeroed {
+    right: 0;
 }
 
 .boring-button {
