@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ricky/Desktop/github_stuff/portfolio_page",
-      "program": "c:/Users/ricky/Desktop/github_stuff/portfolio_page/build/Debug/outDebug",
+      "cwd": "c:/Users/ricky/Desktop/github_stuff/more-about-me/portfolio-page",
+      "program": "c:/Users/ricky/Desktop/github_stuff/more-about-me/portfolio-page/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
