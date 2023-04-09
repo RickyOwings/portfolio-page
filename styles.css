@@ -31,12 +31,12 @@ body {
 
 .selectable:hover{
     background-color: var(--selected-color);
-    scale: 110%;
+    scale: 105%;
 }
 
 .selectable:active{
     background-color: var(--selected-color);
-    scale: 90%;
+    scale: 95%;
 }
 
 
