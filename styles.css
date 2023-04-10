@@ -177,7 +177,9 @@ a {
     margin: 0 auto;
 }
 
-
+.bottom-spacer {
+    height: 300px;
+}
 
 /* ---- CUSTOM SYTLE SELECTORS ---- */
 
