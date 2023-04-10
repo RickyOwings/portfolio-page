@@ -26,10 +26,10 @@ async function main(){
         "pumpkin":{
             "--text-primary-color": "#000000",
             "--text-secondary-color": "#212121",
-            "--highlight-text-color": "#00aa00",
+            "--highlight-text-color": "#00686a",
             "--primary-color": "#eedbba",
             "--secondary-color": "#eabd83",
-            "--selected-color": "#ff3835",
+            "--selected-color": "#fff99d",
             "--unselected-color": "#d1a478",
             "--icon-invert": "0",
         },
