@@ -11,6 +11,8 @@
     /* --unselected-color: #e0d9d4; */
     --unselected-color: #dddddd;
 
+    --icon-invert: 0;
+
     --project-width: 700px;
 }
 
@@ -67,7 +69,7 @@ a {
     transition: opacity 0.2s;
 }
 
-#navbarSpacer {
+.navbar-spacer {
     height: 60px;
 }
 
@@ -190,6 +192,10 @@ a {
 }
 .fifty-width {
     width: 50%;
+}
+
+.color-icon {
+    filter: invert(var(--icon-invert))
 }
 
 /* ---- CUSTOM SYTLE SELECTORS ---- */

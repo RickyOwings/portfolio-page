@@ -11,6 +11,7 @@ async function main(){
             "--secondary-color": "#eeeeee",
             "--selected-color": "#c8fbff",
             "--unselected-color": "#dddddd",
+            "--icon-invert": "0",
         },
         "dark":{
             "--text-primary-color": "#ffffff",
@@ -19,7 +20,8 @@ async function main(){
             "--primary-color": "#000000",
             "--secondary-color": "#111111",
             "--selected-color": "#99630b",
-            "--unselected-color": "#222222"
+            "--unselected-color": "#222222",
+            "--icon-invert": "1",
         },
         "pumpkin":{
             "--text-primary-color": "#000000",
@@ -28,7 +30,8 @@ async function main(){
             "--primary-color": "#eedbba",
             "--secondary-color": "#eabd83",
             "--selected-color": "#ff3835",
-            "--unselected-color": "#d1a478"
+            "--unselected-color": "#d1a478",
+            "--icon-invert": "0",
         },
     }
     let passedTheme = getTheme();
