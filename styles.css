@@ -181,6 +181,17 @@ a {
     height: 300px;
 }
 
+.small-text {
+    font-size: x-small;
+}
+
+.ninety-width {
+    width: 90%;
+}
+.fifty-width {
+    width: 50%;
+}
+
 /* ---- CUSTOM SYTLE SELECTORS ---- */
 
 
