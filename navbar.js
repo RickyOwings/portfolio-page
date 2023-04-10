@@ -14,10 +14,12 @@ async function main(){
 
     function hideNavbars(){
         navbar.style.opacity = 0;
+        navbar.style.pointerEvents = "none";
     }
 
     function showNavbars(){
         navbar.style.opacity = 1;
+        navbar.style.pointerEvents = "all";
     }
 }
 main();

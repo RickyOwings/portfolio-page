@@ -65,7 +65,8 @@ a {
     top:0;
     background-color: var(--secondary-color);
     border: solid px var(--unselected-color);
-
+    z-index: 255;
+    pointer-events: all;
     transition: opacity 0.2s;
 }
 
