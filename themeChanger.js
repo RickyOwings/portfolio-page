@@ -6,14 +6,16 @@ async function main(){
         "light":{
             "--text-primary-color": "#000000",
             "--text-secondary-color": "#212121",
+            "--highlight-text-color": "#0000ff",
             "--primary-color": "#ffffff",
             "--secondary-color": "#eeeeee",
             "--selected-color": "#c8fbff",
-            "--unselected-color": "#dddddd"
+            "--unselected-color": "#dddddd",
         },
         "dark":{
             "--text-primary-color": "#ffffff",
             "--text-secondary-color": "#eeeeee",
+            "--highlight-text-color": "#ffaa00",
             "--primary-color": "#000000",
             "--secondary-color": "#111111",
             "--selected-color": "#99630b",
@@ -22,6 +24,7 @@ async function main(){
         "pumpkin":{
             "--text-primary-color": "#000000",
             "--text-secondary-color": "#212121",
+            "--highlight-text-color": "#00aa00",
             "--primary-color": "#eedbba",
             "--secondary-color": "#eabd83",
             "--selected-color": "#ff3835",

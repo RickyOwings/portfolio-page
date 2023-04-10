@@ -1,6 +1,7 @@
 :root {
     --text-primary-color: #000;
     --text-secondary-color: #212121;
+    --highlight-text-color: #0000ff;
 
     /* --primary-color: #f7f3eb; */
     --primary-color: #ffffff;
@@ -28,6 +29,10 @@ body {
 }
 
 /* ------SELECTABLE------ */
+
+a {
+    color: var(--highlight-text-color);
+}
 
 .selectable {
     margin:4px;
