@@ -96,6 +96,7 @@ function createControls(audio){
     slider.type = "range";
     slider.min = 0;
     slider.max = 1;
+    slider.value = 0;
     slider.step = 0.01;
     slider.placeholder = 0;
     slider.addEventListener('input', ()=>{
