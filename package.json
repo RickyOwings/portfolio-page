@@ -1,0 +1,14 @@
+{
+  "name": "portfolio-page",
+  "version": "1.0.0",
+  "description": "The website that acts as my portfolio page",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "snowpack": "^3.2.2"
+  }
+}
