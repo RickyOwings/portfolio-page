@@ -2,7 +2,37 @@ import React, {ReactNode} from "react";
 import { ReactDOM } from "react";
 import ThemeChanger from "./themeChanger"
 
-export default function (){
+
+
+interface NavbarHrefLocalProps {
+    href: string;
+    children: ReactNode;
+}
+
+export function NavbarHrefLocal(props: NavbarHrefLocalProps){
+    return <a className="tc-pri selectable passesTheme" role="button" href={props.href}>{props.children}</a>
+}
+
+
+interface SiteChangeProps {
+    children: ReactNode;
+    callback: ()=> void;
+}
+
+export function SiteChange(props: SiteChangeProps){
+    return <a className="tc-pri selectable passesTheme" onClick={props.callback} role="button">{props.children}</a> 
+}
+
+
+export type NavbarLink = Element | typeof SiteChange;
+
+
+interface NavbarProps {
+    links: ReactNode[] 
+}
+
+
+export default function (props: NavbarProps){
     let oldScroll = window.scrollY;
     let style = {
         opacity: '1'
@@ -41,10 +71,7 @@ export default function (){
           </button>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a className="tc-pri selectable" href="#projects" role="button">Projects</a>
-              <a className="tc-pri selectable" href="#aboutMe" role="button">About Me</a>
-              <a className="tc-pri selectable" href="#contactInformation" role="button">Contact Information</a>
-              <a className="tc-pri selectable passesTheme" href="./music.html?theme=light" role="button">My Music</a>
+              {...props.links}
               <ThemeChanger/>
             </div>
           </div>

@@ -88,11 +88,9 @@ function ContactInfo(){
     return <>
         <div className="navbar-spacer"></div>
         <div className="sec center-elements content-width">
-          <h5 id="contactInformation"className="centered">Contact Information</h5>
+          <h5 id="contactinformation"className="centered">Contact Information</h5>
             <div><img src="./images/email.png" alt="" width="20" className="color-icon"></img> rickyowings@gmail.com</div>
             <div><img src="./images/github.png" alt="" width="20" className="color-icon"></img> <a href="https://github.com/RickyOwings" target="_blank">https://github.com/RickyOwings</a></div>
-
-
           <p className="small-text">Icons are from <a href="https://www.flaticon.com/authors/freepik" target="_blank">freepik</a></p>
         </div>
         <div className="bottom-spacer"></div>
