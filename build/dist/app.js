@@ -1,6 +1,6 @@
 import React, {useState} from "../_snowpack/pkg/react.js";
 import Homepage from "./homepage.js";
-import Music from "./music.js";
+import Music, {VolumeSlider} from "./music.js";
 import Navbar, {NavbarHrefLocal, SiteChange} from "./navbar.js";
 let page = "homepage";
 export default function() {
@@ -16,10 +16,15 @@ export default function() {
       }, "My Music")
     ],
     music: [
+      /* @__PURE__ */ React.createElement(NavbarHrefLocal, {
+        key: "about",
+        href: "#about"
+      }, "About"),
       /* @__PURE__ */ React.createElement(SiteChange, {
         callback: toHomepage,
         key: "tohomepage"
-      }, "Homepage")
+      }, "Homepage"),
+      /* @__PURE__ */ React.createElement(VolumeSlider, null)
     ]
   };
   var [currentLinks, setLinks] = useState(links.homepage);
