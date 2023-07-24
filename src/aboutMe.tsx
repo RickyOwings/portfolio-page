@@ -7,7 +7,7 @@ interface SectionProperties {
     children: ReactNode;
 }
 function ExpandSection(props: SectionProperties){
-    const id = props.title.toLowerCase();
+    const id = props.title.toLowerCase().replace(/ /g, "");
     const target = "#" + id;
     return <>
         <h5 className="centered selectable ninety-width" data-bs-toggle="collapse" data-bs-target={target} aria-expanded="false" aria-controls={id}>{props.title}</h5>
@@ -63,7 +63,41 @@ function MoreAboutMe(): ReactNode{
                 The final project for the course that I made was <a href="#conveyor">Conveyor</a>. I had the idea for it while I was making the course, so I decided to make it as my final project. It is not entirely original, as it is inspired by the likes of Factorio and Minecraft, but I solved a lot of problems while I was making it. It is probably the most complicated thing that I have made to date, with around 1,200 lines of code! While I was making it, I did not want to get stuck up on just trying to figure out how to layout the game, so the code is a little bit messy. The end product, however, I am really happy with. One thing that I did differently with this game was the way that it was made. Most of my games up to this point were made using a canvas element. This one actually just uses different HTML elements for the things in game. One upside to doing it this way is that it enables you to use CSS animations for some of the things in the game.
             </p>
         </ExpandSection>
+
+        <ExpandSection title="3D Modeling">
+            <h6 className="underline">Introduction</h6>
+            <p>
+                On my free time, I got into this 3d Modeling software called <a href="https://www.blender.org/" target="_blank">Blender</a>. With it, you can create basically anything you can imagine. I got sucked into these tutorials on Youtube talking about what you can do with the software. I highly recommend getting into it. Since it is free, the barrier for entry is just to download it.
+            </p>
+            <h6 className="underline">Node System</h6>
+            <img src="./images/blender_nodes_example.png" alt=""  className="img-width centered"></img>
+            <p>
+                One thing that I really like about Blender is the node system. With it, you can basically connect these different blocks together that have different logic in order to achieve, for example, a texture for an object. The nodes are basically just a graphical programming language in a sense. It is really fun to use once you can wrap your head around it.
+            </p>
+            <h6 className="underline">Addons</h6>
+            <img src="./images/myface_in_blender.png" alt=""  className="img-width centered"></img>
+            <div className="small-text centered">I look so sad lol</div>
+            <p>
+                There are different addons that you can get for Blender. A while back, I got an addon for Blender called <a href="https://keentools.io/download/facebuilder-for-blender" target="_blank">FaceBuilder</a>. With it, you can take a bunch of picture revolving around your face, and morph this template face to fit your face. This is just one of the thousands of addons that people have made for Blender. You can find a lot of them on the <a href="https://blendermarket.com/" target="_blank">Blender Market</a>
+            </p>
+        </ExpandSection>
     </div>
+}
+
+function ContactInfo(){
+    return <>
+        <div className="navbar-spacer"></div>
+        <div className="sec center-elements content-width">
+          <h5 id="contactInformation"className="centered">Contact Information</h5>
+            <div><img src="./images/email.png" alt="" width="20" className="color-icon"></img> rickyowings@gmail.com</div>
+            <div><img src="./images/github.png" alt="" width="20" className="color-icon"></img> <a href="https://github.com/RickyOwings" target="_blank">https://github.com/RickyOwings</a></div>
+
+
+          <p className="small-text">Icons are from <a href="https://www.flaticon.com/authors/freepik" target="_blank">freepik</a></p>
+        </div>
+        <div className="bottom-spacer"></div>
+
+    </>
 }
 
 export default function () {
@@ -78,6 +112,7 @@ export default function () {
             <li>Gaming</li>
         </ul>
         <MoreAboutMe></MoreAboutMe>
+        <ContactInfo></ContactInfo>
     </CDiv>
 }
 
