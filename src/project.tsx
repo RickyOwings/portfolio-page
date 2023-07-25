@@ -12,7 +12,7 @@ interface ProjectProps {
 }
 
 export default function (props: ProjectProps) {
-    const linkText = (props.isRepo) ? "Repo" : "Link (Made for Desktop!)";
+    const linkText = (props.isRepo) ? "Repository" : "Link (Made for Desktop!)";
     const id = props.title.toLowerCase().replace(/ /g, "");
     const target = "#" + id;
     const display = (props?.isVideo && props?.poster) 
