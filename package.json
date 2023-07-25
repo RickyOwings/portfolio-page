@@ -4,7 +4,8 @@
   "description": "The website that acts as my portfolio page",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "npx snowpack build",
+    "dev": "npx snowpack dev"
   },
   "author": "",
   "license": "ISC",
