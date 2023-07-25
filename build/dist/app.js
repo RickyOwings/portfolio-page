@@ -1,4 +1,4 @@
-import React, {useState} from "../_snowpack/pkg/react.js";
+import React, {useState} from "../snowpack/pkg/react.js";
 import Homepage from "./homepage.js";
 import Music, {VolumeSlider} from "./music.js";
 import Navbar, {NavbarHrefLocal, SiteChange} from "./navbar.js";

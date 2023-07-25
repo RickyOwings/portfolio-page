@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 import Project from "./project.js";
 import CDiv from "./centerDiv.js";
 export default function() {

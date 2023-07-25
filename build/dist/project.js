@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 export default function(props) {
   const linkText = props.isRepo ? "Repo" : "Link (Made for Desktop!)";
   const id = props.title.toLowerCase().replace(/ /g, "");

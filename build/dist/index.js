@@ -1,5 +1,5 @@
-import React from "../_snowpack/pkg/react.js";
-import {createRoot} from "../_snowpack/pkg/react-dom/client.js";
+import React from "../snowpack/pkg/react.js";
+import {createRoot} from "../snowpack/pkg/react-dom/client.js";
 import App from "./app.js";
 function main() {
   document.body.innerHTML = '<div id="app"></div>';

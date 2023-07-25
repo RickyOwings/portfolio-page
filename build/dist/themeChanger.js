@@ -1,5 +1,5 @@
-import React from "../_snowpack/pkg/react.js";
-import Cookie from "../_snowpack/pkg/js-cookie.js";
+import React from "../snowpack/pkg/react.js";
+import Cookie from "../snowpack/pkg/js-cookie.js";
 const themes = {
   light: {
     "--text-primary-color": "#000000",

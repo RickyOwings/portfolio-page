@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 import ProjectPage from "./projectsPage.js";
 import AboutMe from "./aboutMe.js";
 export default function() {

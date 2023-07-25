@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 import CDiv from "./centerDiv.js";
 function ExpandSection(props) {
   const id = props.title.toLowerCase().replace(/ /g, "");

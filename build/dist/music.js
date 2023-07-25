@@ -1,4 +1,4 @@
-import React, {useState} from "../_snowpack/pkg/react.js";
+import React, {useState} from "../snowpack/pkg/react.js";
 const volumeElementID = "volume-controller";
 const initialVolume = 0.1;
 function Song(props) {

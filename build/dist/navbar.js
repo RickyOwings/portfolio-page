@@ -1,4 +1,4 @@
-import React from "../_snowpack/pkg/react.js";
+import React from "../snowpack/pkg/react.js";
 import ThemeChanger from "./themeChanger.js";
 export function NavbarHrefLocal(props) {
   return /* @__PURE__ */ React.createElement("a", {
