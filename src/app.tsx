@@ -13,11 +13,11 @@ export default function () {
     const links = {
         homepage: [
             <NavbarHrefLocal key="aboutme" href="#aboutme">About Me</NavbarHrefLocal>,
-            <SiteChange callback={toMusic} key="tomusic">My Music</SiteChange>
+            <SiteChange callback={toMusic} key="tomusic">To My Music</SiteChange>
         ],
         music: [
             <NavbarHrefLocal key="about" href="#about">About</NavbarHrefLocal>,
-            <SiteChange callback={toHomepage} key="tohomepage">Homepage</SiteChange>,
+            <SiteChange callback={toHomepage} key="tohomepage">To Homepage</SiteChange>,
             <VolumeSlider></VolumeSlider>
         ],
     }
