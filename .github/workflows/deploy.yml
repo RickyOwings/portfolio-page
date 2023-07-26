@@ -23,15 +23,8 @@ jobs:
           npx snowpack build
 
       - name: Push CNAME
-        uses: dmnemec/copy_file_to_another_repo_action@main
-        env:
-          API_TOKEN_GITHUB: ${{ secrets.API_TOKEN_GITHUB }}
-        with:
-          source_file: 'CNAME'
-          destination_repo: 'gh-pages'
-          user_email: 'rickyowings@gmail.com'
-          user_name: 'RickyOwings'
-          commit_message: 'pusing CNAME'
+        run: cp CNAME build/CNAME
+
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
