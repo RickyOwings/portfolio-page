@@ -24,12 +24,27 @@ const IDArr = [HBotID, AClockID, AChairID, TankID]
 
 
 function resizeElements(){
-    window.addEventListener('resize', ()=>{
+    const maxWidth = window.innerWidth;
+    IDArr.forEach((id)=>{
+        const element: HTMLElement = document.getElementById(id) as HTMLIFrameElement;
+        if (!element) return;
+        if (targetWidth > maxWidth){
+            element.style.width = `100vw`;
+            element.style.height = `${100 * 9 / 16}vw`;
+        } else {
+            element.style.width = `${targetWidth}px`;
+            element.style.height = `${targetHeight}px`;
+        }
+    })
+
+
+
+    /*window.addEventListener('resize', ()=>{
         resizeFunction();
     });
     window.addEventListener('deviceorientation', ()=>{
         resizeFunction();
-    });
+    });*/
 }
 
 
@@ -48,8 +63,9 @@ function resizeFunction(){
 
 
 export default function (){
-    resizeElements();
-    resizeFunction();
+    window.addEventListener('resize', resizeElements)
+    setTimeout(resizeElements, 50);
+    //resizeFunction();
 
     return <>
         <div className='navbar-spacer'></div>
