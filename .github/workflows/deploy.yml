@@ -23,7 +23,7 @@ jobs:
           npx snowpack build
 
       - name: Push CNAME
-        run: cp $GITHUB_WORKSPACE/CNAME $GITHUB_WORKSPACE/build/CNAME
+        run: echo "rowings.dev" > build/CNAME
 
 
       - name: Deploy
