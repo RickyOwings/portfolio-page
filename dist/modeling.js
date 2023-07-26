@@ -23,11 +23,18 @@ const TigerTank = /* @__PURE__ */ React.createElement("div", {
 });
 const IDArr = [HBotID, AClockID, AChairID, TankID];
 function resizeElements() {
-  window.addEventListener("resize", () => {
-    resizeFunction();
-  });
-  window.addEventListener("deviceorientation", () => {
-    resizeFunction();
+  const maxWidth = window.innerWidth;
+  IDArr.forEach((id) => {
+    const element = document.getElementById(id);
+    if (!element)
+      return;
+    if (targetWidth > maxWidth) {
+      element.style.width = `100vw`;
+      element.style.height = `${100 * 9 / 16}vw`;
+    } else {
+      element.style.width = `${targetWidth}px`;
+      element.style.height = `${targetHeight}px`;
+    }
   });
 }
 function resizeFunction() {
@@ -43,8 +50,8 @@ function resizeFunction() {
   });
 }
 export default function() {
-  resizeElements();
-  resizeFunction();
+  window.addEventListener("resize", resizeElements);
+  setTimeout(resizeElements, 50);
   return /* @__PURE__ */ React.createElement(React.Fragment, null, /* @__PURE__ */ React.createElement("div", {
     className: "navbar-spacer"
   }), /* @__PURE__ */ React.createElement("div", {
