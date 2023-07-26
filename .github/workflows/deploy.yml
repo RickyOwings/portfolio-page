@@ -20,7 +20,7 @@ jobs:
 
       - name: Install and Build
         run: |
-          npm run build
+          npx snowpack build
 
       - name: Deploy
         uses: JamesIves/github-pages-deploy-action@v4
