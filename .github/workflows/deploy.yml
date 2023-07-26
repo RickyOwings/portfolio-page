@@ -23,7 +23,7 @@ jobs:
           npx snowpack build
 
       - name: Push CNAME
-        run: cp 'CNAME' build/'CNAME'
+        run: cp $GITHUB_WORKSPACE/CNAME $GITHUB_WORKSPACE/build/CNAME
 
 
       - name: Deploy
