@@ -22,6 +22,11 @@ export default function() {
     link: "https://rickyowings.github.io/dogfight",
     isRepo: false
   }, "Game built off the original idea of Missile Dodge. There were several things about Missile Dodge that I wanted to improve on, so I rewrote the whole code base in typescript. A lot of the drawing functions had to be custom made in order to achieve the pixelated look, for example, the draw line functions."), /* @__PURE__ */ React.createElement(Project, {
+    title: "Tower Defense Game",
+    imgSrc: "./images/towerdefensegame.png",
+    link: "https://rickyowings.github.io/towerdefensegame/",
+    isRepo: false
+  }, "Tower defense game that is inspired by the likes of Bloons Tower Defense."), /* @__PURE__ */ React.createElement(Project, {
     title: "Missile Dodge",
     imgSrc: "./images/missile_dodge_v2.png",
     link: "https://rickyowings.github.io/Missile-Dodge",
