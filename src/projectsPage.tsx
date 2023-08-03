@@ -39,6 +39,15 @@ export default function () {
             </Project>
 
             <Project 
+                title="Tower Defense Game" 
+                imgSrc="./images/towerdefensegame.png"
+                link="https://rickyowings.github.io/towerdefensegame/"
+                isRepo={false}
+            >
+                Tower defense game that is inspired by the likes of Bloons Tower Defense.
+            </Project>
+
+            <Project 
                 title="Missile Dodge" 
                 imgSrc="./images/missile_dodge_v2.png"
                 link="https://rickyowings.github.io/Missile-Dodge"
