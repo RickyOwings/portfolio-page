@@ -3,6 +3,7 @@ import { ReactDOM } from "react";
 import Homepage from './homepage';
 import Music, { VolumeSlider } from './music';
 import Modeling from './modeling'
+import AboutTheSite from "./aboutTheSite";
 import Navbar, { NavbarHrefLocal, SiteChange } from './navbar';
 
 let page = "homepage";
@@ -17,7 +18,8 @@ export default function () {
         homepage: [
             <NavbarHrefLocal key="aboutme" href="#aboutme">About Me</NavbarHrefLocal>,
             <SiteChange callback={toMusic} key="tomusic">To My Music</SiteChange>,
-            <SiteChange callback={toModeling} key="tomodeling">To 3d Models</SiteChange>
+            <SiteChange callback={toModeling} key="tomodeling">To 3d Models</SiteChange>,
+            <SiteChange callback={toAboutTheSite} key="toaboutthesite">About The Site</SiteChange>
         ],
         music: [
             <NavbarHrefLocal key="about" href="#about">About</NavbarHrefLocal>,
@@ -26,10 +28,12 @@ export default function () {
         ],
         modeling: [
             <SiteChange callback={toHomepage} key="tohomepage">To Homepage</SiteChange>,
-
         ],
+        aboutTheSite: [
+            <SiteChange callback={toHomepage} key="tohomepage">To Homepage</SiteChange>,
+        ]
     }
-    var [currentLinks, setLinks] = useState(links.homepage)
+    var [currentLinks, setLinks] = useState<React.JSX.Element[]>(links.homepage)
     var [content, setContent] = useState(<Homepage></Homepage>);
     function toMusic(){
         setContent(<Music></Music>);
@@ -44,6 +48,11 @@ export default function () {
     function toModeling(){
         setContent(<Modeling></Modeling>);
         setLinks(links.modeling);
+    }
+
+    function toAboutTheSite(){
+        setContent(<AboutTheSite></AboutTheSite>);
+        setLinks(links.aboutTheSite);
     }
 
 
