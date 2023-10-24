@@ -31,10 +31,10 @@ function MoreAboutMe() {
   }, "Garry's Mod"), ". There was a modification to the game called ", /* @__PURE__ */ React.createElement("a", {
     href: "https://www.wiremod.com/",
     target: "_blank"
-  }, "Wiremod"), " which would allow you to essentially program within the game. This was the first thing that really got me into it. They did try to introduce the idea in school with ", /* @__PURE__ */ React.createElement("a", {
+  }, "Wiremod"), " which would allow you to essentially program within the game. This was the first thing that really got me into it. They did try to introduce programming in school with ", /* @__PURE__ */ React.createElement("a", {
     href: "https://scratch.mit.edu/",
     target: "_blank"
-  }, "Scratch"), ", but it did not really get me too interested because of how tedious it was to use."), /* @__PURE__ */ React.createElement("h6", {
+  }, "Scratch"), ", but it did not really get me too interested because of how tedious it was to use. I would be constantly searching for that one code block that I wanted through the menus."), /* @__PURE__ */ React.createElement("p", null, `Wiremod was a really cool mod for Garry's Mod. The basic idea of Wiremod is to add basic functionality to different things in the game with buttons and logic. You could connect components together, like buttons and thrusters, with wires, hence the name Wiremod. The neat thing is that there were different gates that you could use such as "and" and "or" gates. This would allow you to, for example, have two buttons that are required to be pressed at the same time in order for something to happen. If your logic got too complicated, however, you could relegate the logic that you would manually have to build out to an "e2" chip which could do the logic for you in one chip. The main caveat of the "e2" chip was that you would have to program out the logic in a programming language called "Expression 2" which is built on top of lua.`), /* @__PURE__ */ React.createElement("p", null, "In Garry's mod, I  make cars and tanks for fun. All the vehicles I would make in the game were all physics based, so I would have to build out the suspension and steering. I could have wired a lot of the logic for the controls manually, but I would often use an Expression 2 chip instead to relegate all of the control logic over to on chip so that I did not have all these props everywhere. Because I was using the Expression 2 chips, it was super easy for me to implement things such as a system to tense up the steering angle on my cars so that the faster that I was going, the less it would steer the car so that I would not loose control at high speeds."), /* @__PURE__ */ React.createElement("h6", {
     className: "underline"
   }, "First Online Course"), /* @__PURE__ */ React.createElement("img", {
     src: "./images/codecademy.png",
@@ -155,5 +155,7 @@ function ContactInfo() {
 export default function() {
   return /* @__PURE__ */ React.createElement(CDiv, null, /* @__PURE__ */ React.createElement("h4", {
     id: "aboutme"
-  }, "About Me"), /* @__PURE__ */ React.createElement("ul", null, /* @__PURE__ */ React.createElement("li", null, "Calm and nice demeanor"), /* @__PURE__ */ React.createElement("li", null, "Love to learn new things"), /* @__PURE__ */ React.createElement("li", null, "Self taught programmer (HTML, CSS, JAVASCRIPT, C, PYTHON, SQL)"), /* @__PURE__ */ React.createElement("li", null, "Music"), /* @__PURE__ */ React.createElement("li", null, "3D Modeling"), /* @__PURE__ */ React.createElement("li", null, "Gaming")), /* @__PURE__ */ React.createElement(MoreAboutMe, null), /* @__PURE__ */ React.createElement(ContactInfo, null));
+  }, "About Me"), /* @__PURE__ */ React.createElement("p", {
+    className: "content-width"
+  }, "I am an aspiring programmer. I started when I was in high school and I really took a liking to the practice. It is a never ending rabbit hole of discovery and learning. Hopefully I can get into the field some day as it is something I really enjoy to do."), /* @__PURE__ */ React.createElement(MoreAboutMe, null), /* @__PURE__ */ React.createElement(ContactInfo, null));
 }
