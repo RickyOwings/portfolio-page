@@ -18,6 +18,9 @@ export default function AboutTheSite() {
             <p>
                 In converting the website to React, I was able to make the site a single page application. When you click something in the navbar at the top, it does not reload the whole page over again. This was because I made the content of the website use a "useState". Part of me is saying that it is not a good thing to do that, but it works and it is cool! The only thing that I don't like about it currently is that I can't link a certain part of the website, like the music page for example... but I could easily do that... and I will... next thing I do!
             </p>
+            <p>
+                The website is hosting using Github Pages. What I really like, is that I have implementd a github action that compiles the website down into the build folder and pushes the build folder to a separate branch of the repository that contains the actual build down code that is served to the user. It really just makes it as easy as typing in "git push" inside the terminal in order to make any changes to the actual website!
+            </p>
             <h3>Things to improve and I don't like</h3>
             <p>
                 I don't like the way that I am working with styles. The styles are contained in the "public" folder. I would like to figure out how to use the react import styles syntax so that I can have the styles grouped together with their respective elements so that the code is more concise and easier to read. Currently, you have to sift through the css file to find the styling for different elements, which I do not like.
