@@ -19,7 +19,7 @@ export default function AboutTheSite() {
                 In converting the website to React, I was able to make the site a single page application. When you click something in the navbar at the top, it does not reload the whole page over again. This was because I made the content of the website use a "useState". Part of me is saying that it is not a good thing to do that, but it works and it is cool! The only thing that I don't like about it currently is that I can't link a certain part of the website, like the music page for example... but I could easily do that... and I will... next thing I do!
             </p>
             <p>
-                The website is hosting using Github Pages. What I really like, is that I have implementd a github action that compiles the website down into the build folder and pushes the build folder to a separate branch of the repository that contains the actual build down code that is served to the user. It really just makes it as easy as typing in "git push" inside the terminal in order to make any changes to the actual website!
+                The website is hosting using Github Pages. What I really like, is that I have implemented a github action that compiles the website down into the build folder and pushes the build folder to a separate branch of the repository that contains the actual build down code that is served to the user. It really just makes it as easy as typing in "git push" inside the terminal in order to make any changes to the actual website!
             </p>
             <h3>Things to improve and I don't like</h3>
             <p>
