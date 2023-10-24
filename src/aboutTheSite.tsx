@@ -2,6 +2,7 @@ import React from 'react';
 
 export default function AboutTheSite() {
     return <div className='center-elements'> 
+        <div className='navbar-spacer'></div>
         <div className='content-width'>
             <h2>About This Website</h2>
             <p>
