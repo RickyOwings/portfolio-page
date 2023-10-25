@@ -12,6 +12,9 @@ const themes = {
         "--selected-color": "#c8fbff",
         "--unselected-color": "#dddddd",
         "--icon-invert": "0",
+        "--shadow-color": "#0004",
+        "--shadow-hilight-color": "#c8fbffaa",
+        "--shadow-size": "4px"
     },
     "dark":{
         "--text-primary-color": "#ffffff",
@@ -22,6 +25,9 @@ const themes = {
         "--selected-color": "#99630b",
         "--unselected-color": "#222222",
         "--icon-invert": "1",
+        "--shadow-color": "#44a3",
+        "--shadow-hilight-color": "#fa0a",
+        "--shadow-size": "20px"
     },
     "pumpkin":{
         "--text-primary-color": "#000000",
@@ -32,6 +38,9 @@ const themes = {
         "--selected-color": "#fff99d",
         "--unselected-color": "#d1a478",
         "--icon-invert": "0",
+        "--shadow-color": "#0004",
+        "--shadow-hilight-color": "#fff99daa",
+        "--shadow-size": "4px"
     },
     "aqua":{
         "--text-primary-color": "#000000",
@@ -42,6 +51,9 @@ const themes = {
         "--selected-color": "#f9ff00",
         "--unselected-color": "#a3ffda",
         "--icon-invert": "0",
+        "--shadow-color": "#0004",
+        "--shadow-hilight-color": "#f9ff00aa",
+        "--shadow-size": "4px"
     }
 } as const;
 
