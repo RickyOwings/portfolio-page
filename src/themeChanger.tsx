@@ -3,7 +3,7 @@ import { ReactDOM } from "react";
 import Cookie from 'js-cookie';
 
 const themes = {
-    "light":{
+    "light": {
         "--text-primary-color": "#000000",
         "--text-secondary-color": "#212121",
         "--highlight-text-color": "#0000ff",
@@ -13,10 +13,10 @@ const themes = {
         "--unselected-color": "#dddddd",
         "--icon-invert": "0",
         "--shadow-color": "#0004",
-        "--shadow-hilight-color": "#c8fbffaa",
+        "--shadow-hilight-color": "#c8fbff",
         "--shadow-size": "4px"
     },
-    "dark":{
+    "dark": {
         "--text-primary-color": "#ffffff",
         "--text-secondary-color": "#eeeeee",
         "--highlight-text-color": "#ffaa00",
@@ -29,7 +29,7 @@ const themes = {
         "--shadow-hilight-color": "#fa0a",
         "--shadow-size": "20px"
     },
-    "pumpkin":{
+    "pumpkin": {
         "--text-primary-color": "#000000",
         "--text-secondary-color": "#212121",
         "--highlight-text-color": "#00686a",
@@ -42,7 +42,7 @@ const themes = {
         "--shadow-hilight-color": "#fff99daa",
         "--shadow-size": "4px"
     },
-    "aqua":{
+    "aqua": {
         "--text-primary-color": "#000000",
         "--text-secondary-color": "#001a12",
         "--highlight-text-color": "#f9ff00",
@@ -73,14 +73,11 @@ export default function (){
     }
 
     const applyTheme = (): void => {
-        const root = document.querySelector(":root");
-        if (!root) return;
-        const themeObject = themes[theme]; 
+        const themeObject: Object = themes[theme]; 
         Cookie.set("theme", theme);
-        Object.keys(themeObject).forEach((property)=>{
-            const value = themeObject[property];
-            root["style"].setProperty(property, value);
-        });
+        for (const key in themeObject) {
+            document.body.style.setProperty(key, themeObject[key]);
+        }
     };
 
     applyTheme();
