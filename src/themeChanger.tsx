@@ -33,7 +33,17 @@ const themes = {
         "--unselected-color": "#d1a478",
         "--icon-invert": "0",
     },
-}
+    "aqua":{
+        "--text-primary-color": "#000000",
+        "--text-secondary-color": "#001a12",
+        "--highlight-text-color": "#f9ff00",
+        "--primary-color": "#69faa8",
+        "--secondary-color": "#4fa184",
+        "--selected-color": "#f9ff00",
+        "--unselected-color": "#a3ffda",
+        "--icon-invert": "0",
+    }
+} as const;
 
 export default function (){
     const getTheme = Cookie.get("theme");
