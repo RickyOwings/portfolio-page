@@ -14,7 +14,11 @@
     --icon-invert: 0;
 
     --project-width: 700px;
+    --shadow-color: #000a;
+    --shadow-hilight-color: #000a;
+    --shadow-size: 8px;
 }
+
 
 .navbar-brand {
     color: var(--text-primary-color)
@@ -44,15 +48,18 @@ a {
     touch-action: none;
     cursor:pointer;
     user-select: none;
+    filter:drop-shadow(0 0 var(--shadow-size) var(--shadow-color))
 }
 
 .selectable:hover{
     background-color: var(--selected-color);
+    filter:drop-shadow(0 0 var(--shadow-size) var(--shadow-hilight-color));
     scale: 105%;
 }
 
 .selectable:active{
     background-color: var(--selected-color);
+    filter:drop-shadow(0 0 var(--shadow-size) var(--shadow-hilight-color));
     scale: 95%;
 }
 
@@ -68,6 +75,7 @@ a {
     z-index: 255;
     pointer-events: all;
     transition: opacity 0.2s;
+    filter:drop-shadow(0 0 var(--shadow-size) var(--shadow-color))
 }
 
 .navbar-spacer {
@@ -101,6 +109,10 @@ a {
     background-color: var(--secondary-color);
     border: solid 1px var(--unselected-color);
     margin: 1px;
+    border-radius: 8px;
+    z-index: 2;
+    /*filter:drop-shadow(0 0 20px var(--shadow-color))*/
+    box-shadow: 0 0 var(--shadow-size) var(--shadow-color);
 }
 
 .tc-pri {

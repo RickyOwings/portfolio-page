@@ -9,7 +9,10 @@ const themes = {
     "--secondary-color": "#eeeeee",
     "--selected-color": "#c8fbff",
     "--unselected-color": "#dddddd",
-    "--icon-invert": "0"
+    "--icon-invert": "0",
+    "--shadow-color": "#0004",
+    "--shadow-hilight-color": "#c8fbffaa",
+    "--shadow-size": "4px"
   },
   dark: {
     "--text-primary-color": "#ffffff",
@@ -19,7 +22,10 @@ const themes = {
     "--secondary-color": "#111111",
     "--selected-color": "#99630b",
     "--unselected-color": "#222222",
-    "--icon-invert": "1"
+    "--icon-invert": "1",
+    "--shadow-color": "#44a3",
+    "--shadow-hilight-color": "#fa0a",
+    "--shadow-size": "20px"
   },
   pumpkin: {
     "--text-primary-color": "#000000",
@@ -29,7 +35,23 @@ const themes = {
     "--secondary-color": "#eabd83",
     "--selected-color": "#fff99d",
     "--unselected-color": "#d1a478",
-    "--icon-invert": "0"
+    "--icon-invert": "0",
+    "--shadow-color": "#0004",
+    "--shadow-hilight-color": "#fff99daa",
+    "--shadow-size": "4px"
+  },
+  aqua: {
+    "--text-primary-color": "#000000",
+    "--text-secondary-color": "#001a12",
+    "--highlight-text-color": "#f9ff00",
+    "--primary-color": "#69faa8",
+    "--secondary-color": "#4fa184",
+    "--selected-color": "#f9ff00",
+    "--unselected-color": "#a3ffda",
+    "--icon-invert": "0",
+    "--shadow-color": "#0004",
+    "--shadow-hilight-color": "#f9ff00aa",
+    "--shadow-size": "4px"
   }
 };
 export default function() {
