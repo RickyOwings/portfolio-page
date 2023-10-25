@@ -11,7 +11,7 @@ const themes = {
     "--unselected-color": "#dddddd",
     "--icon-invert": "0",
     "--shadow-color": "#0004",
-    "--shadow-hilight-color": "#c8fbffaa",
+    "--shadow-hilight-color": "#c8fbff",
     "--shadow-size": "4px"
   },
   dark: {
@@ -70,15 +70,11 @@ export default function() {
     applyTheme();
   };
   const applyTheme = () => {
-    const root = document.querySelector(":root");
-    if (!root)
-      return;
     const themeObject = themes[theme];
     Cookie.set("theme", theme);
-    Object.keys(themeObject).forEach((property) => {
-      const value = themeObject[property];
-      root["style"].setProperty(property, value);
-    });
+    for (const key in themeObject) {
+      document.body.style.setProperty(key, themeObject[key]);
+    }
   };
   applyTheme();
   return /* @__PURE__ */ React.createElement("a", {
