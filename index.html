@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./src/style.css">
+    <title>Portfolio Page</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Ricky's Portfolio</h1>
+            <button class="navBtn" target="projects">Projects</button>
+            <button class="navBtn" target="aboutMe">About Me</button>
+            <button>Music</button>
+            <button>3D Models</button>
+            <button>About Site</button>
+        </nav>
+    </header>
+    <main>
+        <section id="projects" class="toggleable" shown>
+            <header>
+                <h2>Projects</h2>
+            </header>
+
+            <section id="projectBody">
+                <section id="dogfightV2">
+                    <h3>Conveyor</h3>
+                    <img src="images/dogfightV2.png" alt="Image of dogfight version 2 game">
+                    <span>
+                        <button class="toggleBtn" target="aboutDogfightV2">About</button>
+                        <a href="https://ricky-owings.github.io/dogfight-v2/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutDogfightV2">
+                        <p>
+                        </p>
+                            This is the third iteration of the missile dodge game. This is
+                            the most polished looking version of the game.
+                        <p>
+                            One challenge with this version is that I used <em>WebGL</em> for the
+                            rendering instead of basic <em>CanvasRenderingContext2D</em>. I created
+                            a large libary for drawing different polygons with <em>WebGL</em>.
+                        </p>
+                        <p>
+                            The text in the game used vector graphics. I modeled the characters for 
+                            the ascii alphabet using Blender, and wrote a script in Python to generate
+                            Typescript code that contained all the points for each letter automatically. 
+                            That way, if I didn't like how a character looked, I could change it on the fly.
+                        </p>
+                    </div>
+                </section>
+                <section id="conveyor">
+                    <h3>Conveyor</h3>
+                    <img src="images/conveyor.png" alt="Image of conveyor belt game">
+                    <span>
+                        <button class="toggleBtn" target="aboutConveyor">About</button>
+                        <a href="https://rickyowings.github.io/conveyor/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutConveyor">
+                        <p>
+                            This is a tiled conveyor belt game that I made for <em>CS50x</em>. 
+                            I didn't use the canvas element to make it, rather, I 
+                            used CSS tranforms to move everything around. 
+                        </p>
+                        <p>
+                            There were some challenges I had while I was making it. One that comes to
+                            mind is dealing with the amount of items moving around in the game. All of
+                            the items are HTML <code>&lt;img&gt;</code> elements. When objects would
+                            get deleted, I would initially remove the element, then create a new one
+                            if I needed one. The problem with this is that it did not run good on
+                            the browser. I ended up creating a pooling system where I turn a bunch
+                            of them invisible and reuse them instead of creating new ones. I didn't
+                            know what to call it at the time, but that is the solution I landed on!
+                        </p>
+                    </div>
+                </section>
+
+                <section id="simpleBoxPlatformer">
+                    <h3>Simple Box Platformer</h3>
+                    <img src="images/simpleBoxPlatformer.png" alt="Image of simple box platformer game">
+                    <span>
+                        <button class="toggleBtn" target="aboutPlatformer">About</button>
+                        <a href="https://rickyowings.github.io/simple-box-platformer/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutPlatformer">
+                        <p>
+                            This is a platformer game that I made for the fun of it. It has a basic
+                            level editor.
+                        </p>
+                        <p>
+                            The game is rendered onto an HTML canvas. The canvas is rendered at a low resolution. 
+                            The css can scale and rotate the canvas around the screen. When you play on a bigger
+                            map, the actual size of the canvas changes.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="dogfight">
+                    <h3>Dogfight</h3>
+                    <img src="images/dogfight.png" alt="Image of dogfight game">
+                    <span>
+                        <button class="toggleBtn" target="aboutDogfight">About</button>
+                        <a href="https://rickyowings.github.io/dogfight/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutDogfight">
+                        <p>
+                            Missile Evasion game. This is the second iteration I had on this idea. 
+                            The first was Missile Dodge.
+                        </p>
+                        <p>
+                            The rendering for the game is pretty rudimentary. It is going over all of the pixels
+                            and manually setting the color values. Setting higher resolutions can cause it to
+                            lag. The advantage of doing it this way is it lets me do the cool fire effects.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="towerDefense">
+                    <h3>Tower Defense Game</h3>
+                    <img src="images/towerDefenseGame.png" alt="Image of tower defense game">
+                    <span>
+                        <button class="toggleBtn" target="aboutTowerDefense">About</button>
+                        <a href="https://rickyowings.github.io/dogfight/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutTowerDefense">
+                        <p>                         
+                            This is a tower defense game that I made (inspired by <em>Bloons Tower Defense</em>).
+                        </p>
+                    </div>
+                </section>
+
+
+                <section id="missileDodge">
+                    <h3>Missile Dodge</h3>
+                    <img src="images/missileDodge.png" alt="Image of missile dodge game">
+                    <span>
+                        <button class="toggleBtn" target="aboutMissileDodge">About</button>
+                        <a href="https://rickyowings.github.io/Missile-Dodge/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutMissileDodge">
+                        <p>
+                            This is the first iteration of the missile dodge game.
+                        </p>
+                        <p>
+                            The game uses vector graphics with Canvas2D functions to render things. One
+                            challenge I had was creating an algorithm to have the missile predict where the
+                            player is going to be next.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="fightingGame">
+                    <h3>Missile Dodge</h3>
+                    <img src="images/fightingGame.png" alt="Image of fighting game">
+                    <span>
+                        <button class="toggleBtn" target="aboutFightingGame">About</button>
+                        <a href="https://rickyowings.github.io/Fighting-Game/" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutFightingGame">
+                        <p>
+                            This is a fighting game that I made. 
+                        </p>
+                        <p>
+                            One of the 5challenges for this game was the pixel art. The animation for the
+                            stick figures was pretty fun to do. 
+                        </p>
+                    </div>
+                </section>
+
+                <section id="terminalTyping">
+                    <h3>Missile Dodge</h3>
+                    <img src="images/terminalTyping.png" alt="Image of terminal typing">
+                    <span>
+                        <button class="toggleBtn" target="aboutTerminalTyping">About</button>
+                        <a href="https://github.com/RickyOwings/terminal_typing_v2" target="_blank">
+                            <button>Repository</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutTerminalTyping">
+                        <p>
+                            This is a terminal typing game that I made. It is a typing test game
+                            where you can see your words per minute.
+                        </p>
+                    </div>
+                </section>
+
+                <section id="kesslerKnockout">
+                    <h3>Missile Dodge</h3>
+                    <img src="images/kesslerKnockout.png" alt="Image of kessler knockout game">
+                    <span>
+                        <button class="toggleBtn" target="aboutKesslerKnockout">About</button>
+                        <a href="https://rickyowings.github.io/Fighting-Game/Kessler-Knockout" target="_blank">
+                            <button>Link (Made for Desktop)</button>
+                        </a>
+                    </span>
+                    <div class="toggleable" id="aboutTerminalTyping">
+                        <p>
+                            This is the first game that I ever made. It is a bullet hell where persistant 
+                            obstacles are gravitationally attracted toward the player. Upon losing health,
+                            the bounds that the player is allowed to traverse contracts, limiting the play 
+                            area. The gravitational force increases over time.
+                        </p>
+                    </div>
+                </section>
+
+
+            </section>
+        </section>
+        <section id="aboutMe" class="toggleable">
+            <header>
+                <h2>About Me</h2>
+            </header>
+            <section>
+                <h3>Basic Introduction</h3>
+                <p>
+                    My name is <em>Ricky Owings</em>. I program in my free time. I would like to get a job
+                    in the industry one day.
+                </p>
+                <h3>My Progression</h3>
+                <p>
+                    When I was in highschool, I did a programming club for one day. I didn't learn much at the
+                    time, but it planted the seeds for me to get into it later on.
+                </p>
+                <p>
+                    I used to play a game called <em>Garry's Mod</em>. This is a sandbox game built off of the 
+                    <em>Source</em> engine. I would create tanks in the game with a mod called 
+                    <em>Armoured Combat Framework</em> or <em>ACF</em> for short. To control the vehicles, you would
+                    wire up the brakes using another mod called <em>Wire Mod</em>. You could hook all of the controls
+                    for the tank into what is called an <em>Expression 2</em> chip, which could take inputs and outputs.
+                    You could then use a programming langauge to write the logic for the chip. This was the first 
+                    language that I got into.
+                </p>
+                <p>
+                    I then taught myself <em>Javascript</em>, <em>HTML</em>, and <em>CSS</em> with <em>Codecademy</em> 
+                    and some <em>Youtube</em> tutorials. The first game that I made was <em>Kessler Knockout</em> 
+                    which you can find on the projects page.
+                </p>
+                <p>
+                    I took the <em>CS50x</em> course by <em>Harvard</em>. This was a good experience for
+                    me as I got to learn <em>C</em>, <em>Python</em>, and <em>SQL</em>, brushing up on some web stuff
+                    along with that. At the end of that course, I created the game <em>Conveyor</em>. At the time, this
+                    was one of the most polished games that I have made. Looking back on it, the code looks pretty
+                    ugly to me now.
+                </p>
+                <h3></h3>
+            </section>
+        </section>
+    </main>
+    <footer>
+        <script src="src/index.js"></script>
+    </footer>
+</body>
+</html>

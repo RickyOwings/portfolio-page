@@ -4,8 +4,7 @@
   "description": "The website that acts as my portfolio page",
   "main": "index.html",
   "scripts": {
-    "build": "npx snowpack build",
-    "dev": "npx snowpack dev"
+      "server": "python3 -m http.server 8080"
   },
   "author": "",
   "license": "ISC"
